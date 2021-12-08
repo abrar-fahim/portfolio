@@ -8,6 +8,8 @@ import 'primereact/resources/themes/lara-light-indigo/theme.css'   //theme
 import 'primereact/resources/primereact.min.css'                 //core css
 import 'primeicons/primeicons.css'                              //icons
 
+import cv from './cv/CV.pdf'
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -35,8 +37,19 @@ function App() {
     {
       label: "My Resume",
       icon: 'pi pi-fw pi-file-pdf',
+      // url: "cv"
+      command: (event) => {
+        // event.originalEvent: Browser event
+        // event.item: MenuItem instance
+        const link = document.createElement('a');
+        link.download = "Abrar-Fahim-CV.pdf"
+        link.href = cv;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
     },
-   
+
   ]
 
 
@@ -68,6 +81,7 @@ function App() {
       <Routes>
         <Route path="projects" element={<Projects />} />
         <Route path="" element={<About />} />
+        <Route path="cv" element={<cv />}/>
       </Routes>
     </Router>
 
