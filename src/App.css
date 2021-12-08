@@ -1,11 +1,27 @@
 .App {
   text-align: center;
+  
+}
+
+.top-fixed {
+  position: fixed;
+  width: 100%;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+@media screen and (max-width: 960px) {
+  .p-menubar {
+      position: fixed  !important;
+      width: 100%;
+   
+  }
+}
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -36,3 +52,236 @@
     transform: rotate(360deg);
   }
 }
+@media (min-width: 960px) {
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px;
+    margin-bottom: 200px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  }
+}
+
+@media (max-width: 960px) {
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    margin-bottom: 200px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  }
+}
+
+
+
+
+.socials-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.socials-container a {
+  text-decoration: none;
+}
+
+.p-button {
+  margin-left: 20px !important;
+}
+
+
+
+/* Projects */
+@media(min-width: 1100px) {
+  .project-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .project-container-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+@media(max-width: 1100px) {
+  .project-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+  }
+  .project-container-reverse {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+  }
+}
+
+.project-description {
+  margin: 100px 50px;
+}
+
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 50px;
+  /* color: var(--primary-color) */
+  
+}
+
+.name {
+  display: inline;
+  color: var(--primary-color);
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 500;
+  
+}
+
+ul {
+  list-style-position: outside;
+  list-style-type: none;
+}
+
+.page-container ul li:before {
+  content: "▹";
+  color: var(--primary-color);
+  font-size: 30px;
+}
+
+li {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0px;
+
+}
+h7 {
+  font-size: 18px;
+
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+h3 {
+  color: var(--primary-color);
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 0px;
+  margin: 0px;
+}
+
+h2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+
+
+p {
+  font-size: 20px;
+}
+
+.p-decor {
+  display: inline;
+  font-weight: 300;
+}
+.project-tech-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.project-tech {
+  font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+  font-size: 18px;
+  font-weight: 400;
+  color: grey;
+  margin: 10px 10px 0px 0px;
+}
+
+.project-link {
+  display: flex;
+  border: solid var(--primary-color) 1px;
+  text-decoration: none;
+  color: var(--primary-color);
+  margin-top: 20px;
+  padding: 10px;
+  width: fit-content;
+  align-self: center;
+}
+
+img {
+  box-shadow: 0px -10px 30px #ccc;
+}
+
+
+.pic {
+  height: 500px;
+  margin: 100px;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.grid-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0px 5px;
+  width: 500px;
+  /* min-width: fit-content; */
+  /* background-color: purple; */
+  
+  
+}
+
+.grid-item div {
+  margin: 10px
+}
+
+.grid-item-title {
+  align-self: center;
+  /* background-color: yellow; */
+}
+
+.grid-item-container {
+  display: flex;
+  flex-direction: column;
+  /* background-color: orange; */
+  margin: 0px 20px;
+  min-width: fit-content;
+}
+
+.centered {
+  margin-top: 100px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
